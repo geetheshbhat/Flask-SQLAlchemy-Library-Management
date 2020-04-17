@@ -1,0 +1,32 @@
+{% block content %}
+<style>
+table, th, td {
+    border: 1px solid black;
+  }
+</style>
+<div class="container">
+    <table style="width:100%">
+        <tr>
+            <th>Student ID</th>
+            <th>Book ID</th>
+            <th>Borrowed Date</th>
+            <th>Due Date<th>
+            <th>Status</th>
+        </tr>
+    {% for i in range (0, len)%}
+    <tr>
+        <td>{{ items[i]['Student ID'] }}</td>
+      <td>{{ items[i]['Book ID']}}</td> 
+      <td>{{ items[i]['Borrowed Date']}}</td> 
+      <td>{{ items[i]['Due Date']}}</td> 
+      <td>{{ items[i]['Status']}}</td> 
+       
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+
+
+{% endblock%}

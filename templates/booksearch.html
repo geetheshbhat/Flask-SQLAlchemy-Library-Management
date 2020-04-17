@@ -1,0 +1,34 @@
+{% block content %}
+<style>
+table, th, td {
+    border: 1px solid black;
+  }
+</style>
+<div class="container">
+    <table style="width:100%">
+        <tr>
+            <th>Book ID</th>
+            <th>ISB</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>Book Subject</th>
+            <th>Book Quantity</th>
+        </tr>
+    {% for i in range (0, len)%}
+    <tr>
+        <td>{{ items[i]['Book_ID'] }}</td>
+      <td>{{ items[i]['ISBN']}}</td> 
+      <td>{{ items[i]['Book title']}}</td> 
+      <td>{{ items[i]['Book Author']}}</td> 
+      <td>{{ items[i]['Book Subject']}}</td> 
+      <td>{{ items[i]['Quantity']}}</td> 
+       
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+
+
+{% endblock%}
